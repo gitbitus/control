@@ -29,7 +29,7 @@ scene.add(ground);
 let loader = new THREE.GLTFLoader();
 let bhalu;
 
-loader.load('assets/bhalu.glb', function (gltf) {
+loader.load('bhalu.glb', function (gltf) {
     bhalu = gltf.scene;
     bhalu.scale.set(30, 30, 30);
     bhalu.position.set(0, 5, 0); // Place Bhalu at the center
@@ -77,3 +77,4 @@ window.addEventListener('resize', () => {
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
 });
+
