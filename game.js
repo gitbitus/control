@@ -32,7 +32,7 @@ let bhalu;
 loader.load('bhalu.glb', function (gltf) {
     bhalu = gltf.scene;
     bhalu.scale.set(30, 30, 30);
-    bhalu.position.set(0, 5, 0); // Place Bhalu at the center
+    bhalu.position.set(20, 5, 20); // Place Bhalu at the center
     bhalu.traverse(obj => { if (obj.isMesh) obj.castShadow = true; });
     scene.add(bhalu);
 }, undefined, error => console.error(error));
@@ -54,7 +54,7 @@ document.addEventListener('keyup', function (event) {
 });
 
 camera.position.set(20, 20, 0);
-camera.lookAt(0, 0, 0);
+camera.lookAt(20, 5, 20);
 
 // ======== 7. Game loop ========
 function animate() {
@@ -77,5 +77,6 @@ window.addEventListener('resize', () => {
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
 });
+
 
 
