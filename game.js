@@ -53,7 +53,7 @@ document.addEventListener('keyup', function (event) {
     if (['w', 's'].includes(event.key)) bhaluSpeed = 0;
 });
 
-camera.position.set(20, 20, 20);
+camera.position.set(20, 20, 0);
 camera.lookAt(0, 0, 0);
 
 // ======== 7. Game loop ========
@@ -77,4 +77,5 @@ window.addEventListener('resize', () => {
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
 });
+
 
